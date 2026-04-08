@@ -1,0 +1,9 @@
+{
+  "name": "smarthome-node-red",
+  "dependencies": {
+    "node-red": "latest",
+    "node-red-dashboard": "3.6.6",
+    "@gogovega/node-red-contrib-firebase-realtime-database": "0.8.2",
+    "@gogovega/firebase-config-node": "0.3.3"
+  }
+}
