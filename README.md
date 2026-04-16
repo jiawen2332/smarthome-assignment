@@ -1,4 +1,4 @@
-# smarthome-assignment
+#Smart Home Safety and Automation System
 Group Member: 
 1. Goh Wei Nie
 2. Ng Yee Qing
