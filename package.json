@@ -1,5 +1,11 @@
 {
   "name": "smarthome-node-red",
+  "version": "1.0.0",
+  "description": "Smart Home Safety and Automation System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-red --userDir . flows.json"
+  },
   "dependencies": {
     "node-red": "latest",
     "node-red-dashboard": "3.6.6",
