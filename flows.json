@@ -14,7 +14,7 @@
         "projectID": "${FB_PROJECT_ID}",
         "clientEmail": "${FB_CLIENT_EMAIL}",
         "privateKey": "${FB_PRIVATE_KEY}",
-        "databaseURL": "${FB_URL}",
+        "databaseURL": "https://smarthome-5f9cf-default-rtdb.asia-southeast1.firebasedatabase.app/",
         "claims": {},
         "createUser": false,
         "status": {
