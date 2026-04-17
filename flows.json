@@ -237,6 +237,16 @@
         "className": ""
     },
     {
+        "id": "d2029824858c98dd",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@gogovega/firebase-config-node": "0.3.3",
+            "node-red-dashboard": "3.6.6",
+            "@gogovega/node-red-contrib-firebase-realtime-database": "0.8.2"
+        }
+    },
+    {
         "id": "ddc8ebb07be4139c",
         "type": "ui_template",
         "z": "f62c0d617e212335",
@@ -1006,15 +1016,5 @@
         "x": 1160,
         "y": 580,
         "wires": []
-    },
-    {
-        "id": "d2029824858c98dd",
-        "type": "global-config",
-        "env": [],
-        "modules": {
-            "@gogovega/firebase-config-node": "0.3.3",
-            "node-red-dashboard": "3.6.6",
-            "@gogovega/node-red-contrib-firebase-realtime-database": "0.8.2"
-        }
     }
 ]
