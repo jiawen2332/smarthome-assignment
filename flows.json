@@ -10,7 +10,7 @@
         "id": "fb_config_main",
         "type": "firebase-config",
         "name": "SmartHome_Main",
-        "authType": "privateKey",
+        "authType": "apiKey",
         "apiKey": "${FB_API_KEY}",
         "databaseURL": "https://smarthome-5f9cf-default-rtdb.asia-southeast1.firebasedatabase.app/",
         "claims": {},
