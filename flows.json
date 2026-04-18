@@ -6,7 +6,7 @@
         "disabled": false,
         "info": "0409 -Ge"
     },
-   {
+    {
         "id": "fb_config_main",
         "type": "firebase-config",
         "name": "SmartHome_Main",
@@ -291,14 +291,14 @@
         "type": "ui_template",
         "z": "f62c0d617e212335",
         "group": "bee0ea0db699c4dc",
-        "name": "",
+        "name": "SMART HOME COMMAND CENTER",
         "order": 2,
         "width": "0",
         "height": "0",
         "format": "<div style=\"text-align: center; margin-bottom: 20px;\">\n    <h2 style=\"margin: 0; color: #c9d1d9;\">SMART HOME COMMAND CENTER</h2>\n    <p style=\"color: #8b949e; margin-top: 5px;\"><span style=\"color:#2e7d32;\">●</span> Real-time System Status</p>\n</div>\n<div class='overview-container'>\n    <div class='overview-card'>\n        <div class='overview-title'>🔥 M1: Fire</div>\n        <div class='overview-value' style='color:{{msg.payload.m1.color}}'>{{msg.payload.m1.payload}}</div>\n        <div class='overview-time'>{{msg.payload.m1.time}}</div>\n    </div>\n    <div class='overview-card'>\n        <div class='overview-title'>💡 M2: Lights</div>\n        <div class='overview-value' style='color:{{msg.payload.m2.color}}'>{{msg.payload.m2.payload}}</div>\n        <div class='overview-time'>{{msg.payload.m2.time}}</div>\n    </div>\n    <div class='overview-card'>\n        <div class='overview-title'>🌀 M3: Fan</div>\n        <div class='overview-value' style='color:{{msg.payload.m3.color}}'>{{msg.payload.m3.payload}}</div>\n        <div class='overview-time'>{{msg.payload.m3.time}}</div>\n    </div>\n    <div class='overview-card'>\n        <div class='overview-title'>🚪 M4: Door</div>\n        <div class='overview-value' style='color:{{msg.payload.m4.color}}'>{{msg.payload.m4.payload}}</div>\n        <div class='overview-time'>{{msg.payload.m4.time}}</div>\n    </div>\n    <div class='overview-card'>\n        <div class='overview-title'>🛡️ M5: Radar</div>\n        <div class='overview-value' style='color:{{msg.payload.m5.color}}'>{{msg.payload.m5.payload}}</div>\n        <div class='overview-time'>{{msg.payload.m5.time}}</div>\n    </div>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
-        "resendOnRefresh": false,
+        "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 1060,
@@ -773,117 +773,6 @@
         "wires": []
     },
     {
-        "id": "f1fb91576376a428",
-        "type": "firebase-in",
-        "z": "f62c0d617e212335",
-        "name": "M1 Temp",
-        "constraints": {},
-        "database": "fb_config_main",
-        "inputs": 0,
-        "listenerType": "value",
-        "outputType": "auto",
-        "passThrough": false,
-        "path": "Module1/FireData",
-        "pathType": "str",
-        "useConstraints": false,
-        "x": 100,
-        "y": 140,
-        "wires": [
-            [
-                "7daa6b8e5e8b5c1d",
-                "f0072e0c97ad8423"
-            ]
-        ]
-    },
-    {
-        "id": "5470e416eb21402e",
-        "type": "firebase-in",
-        "z": "f62c0d617e212335",
-        "name": "M4 Door",
-        "constraints": {},
-        "database": "fb_config_main",
-        "inputs": 0,
-        "listenerType": "value",
-        "outputType": "auto",
-        "passThrough": false,
-        "path": "Module4/SecurityData",
-        "pathType": "str",
-        "useConstraints": false,
-        "x": 100,
-        "y": 260,
-        "wires": [
-            [
-                "02510b2fb79650ed"
-            ]
-        ]
-    },
-    {
-        "id": "340bc34029ebbf5f",
-        "type": "firebase-in",
-        "z": "f62c0d617e212335",
-        "name": "M5 Distance",
-        "constraints": {},
-        "database": "fb_config_main",
-        "inputs": 0,
-        "listenerType": "value",
-        "outputType": "auto",
-        "passThrough": false,
-        "path": "Module_5/room_activity",
-        "pathType": "str",
-        "useConstraints": false,
-        "x": 100,
-        "y": 380,
-        "wires": [
-            [
-                "a189f9470baf6c8d"
-            ]
-        ]
-    },
-    {
-        "id": "ebaa3a21b367a683",
-        "type": "firebase-in",
-        "z": "f62c0d617e212335",
-        "name": "M2 Lux",
-        "constraints": {},
-        "database": "fb_config_main",
-        "inputs": 0,
-        "listenerType": "value",
-        "outputType": "auto",
-        "passThrough": false,
-        "path": "Module2/LightData",
-        "pathType": "str",
-        "useConstraints": false,
-        "x": 90,
-        "y": 540,
-        "wires": [
-            [
-                "96f0ec693c6e0d57"
-            ]
-        ]
-    },
-    {
-        "id": "ad4639c33dd36362",
-        "type": "firebase-in",
-        "z": "f62c0d617e212335",
-        "name": "M3 Fan",
-        "constraints": {},
-        "database": "fb_config_main",
-        "inputs": 0,
-        "listenerType": "value",
-        "outputType": "auto",
-        "passThrough": false,
-        "path": "Module3/VentData",
-        "pathType": "str",
-        "useConstraints": false,
-        "x": 80,
-        "y": 720,
-        "wires": [
-            [
-                "3c565635bd801264"
-            ]
-        ]
-    },
-    {
         "id": "68afea43da11f14c",
         "type": "ui_template",
         "z": "f62c0d617e212335",
@@ -1020,5 +909,116 @@
         "x": 1160,
         "y": 580,
         "wires": []
+    },
+    {
+        "id": "f1fb91576376a428",
+        "type": "firebase-in",
+        "z": "f62c0d617e212335",
+        "name": "M1 Temp",
+        "constraints": {},
+        "database": "fb_config_main",
+        "inputs": 0,
+        "listenerType": "value",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "Module1/FireData",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "7daa6b8e5e8b5c1d",
+                "f0072e0c97ad8423"
+            ]
+        ]
+    },
+    {
+        "id": "5470e416eb21402e",
+        "type": "firebase-in",
+        "z": "f62c0d617e212335",
+        "name": "M4 Door",
+        "constraints": {},
+        "database": "fb_config_main",
+        "inputs": 0,
+        "listenerType": "value",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "Module4/SecurityData",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "02510b2fb79650ed"
+            ]
+        ]
+    },
+    {
+        "id": "340bc34029ebbf5f",
+        "type": "firebase-in",
+        "z": "f62c0d617e212335",
+        "name": "M5 Distance",
+        "constraints": {},
+        "database": "fb_config_main",
+        "inputs": 0,
+        "listenerType": "value",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "Module_5/room_activity",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 100,
+        "y": 380,
+        "wires": [
+            [
+                "a189f9470baf6c8d"
+            ]
+        ]
+    },
+    {
+        "id": "ebaa3a21b367a683",
+        "type": "firebase-in",
+        "z": "f62c0d617e212335",
+        "name": "M2 Lux",
+        "constraints": {},
+        "database": "fb_config_main",
+        "inputs": 0,
+        "listenerType": "value",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "Module2/LightData",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 90,
+        "y": 540,
+        "wires": [
+            [
+                "96f0ec693c6e0d57"
+            ]
+        ]
+    },
+    {
+        "id": "ad4639c33dd36362",
+        "type": "firebase-in",
+        "z": "f62c0d617e212335",
+        "name": "M3 Fan",
+        "constraints": {},
+        "database": "fb_config_main",
+        "inputs": 0,
+        "listenerType": "value",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "Module3/VentData",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 80,
+        "y": 720,
+        "wires": [
+            [
+                "3c565635bd801264"
+            ]
+        ]
     }
 ]
